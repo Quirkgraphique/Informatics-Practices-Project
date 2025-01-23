@@ -1,0 +1,163 @@
+import pandas as pd
+
+import matplotlib.pyplot as plt
+
+# Load the dataset once at the beginning dfpd.read_csv("Book.csv")
+
+# Display welcome message
+
+print("." 222)
+
+print("\t" 5, "Warm Greetings from us to you")
+
+print("." 222)
+
+def top5dance():
+
+# Top 5 songs by danceability for Sabrina Carpenter
+
+df5df df['artist_names'] == 'Sabrina Carpenter']
+
+[['danceability', 'track_name']].sort_values("danceability", ascending False).head(5)
+
+print("\n--- Top 5 Songs by Danceability ---")
+
+print(df5)
+
+df5.plot(kind='bar', x="track_name", y="danceability", title="Top 5 Danceability Report for Sabrina Carpenter", color="pink")
+
+plt.ylabel('Danceability')
+
+plt.show()
+
+def songs_perweekchart():
+
+#Top 5 songs by weeks on chart for Sabrina Carpenter
+
+top_weeks_df = df df['artist_names'] == 'Sabrina Carpenter']
+
+[['track_name',
+
+'weeks_on_chart']].sort_values("weeks_on_chart",
+
+ascending-False).head(5)
+
+print("\n--- Top 5 Songs by Weeks on Chart ---")
+
+print(top_weeks_df)
+
+top_weeks_df.plot(x="track_name", y="weeks_on_chart", marker=".", markersize-7, color="green", linewidth=1, linestyle-"dashdot")
+
+plt.xlabel("Track Name")
+
+plt.ylabel("Weeks on Chart")
+
+plt.title("Top 5 Songs by Weeks on Chart for Sabrina Carpenter")
+
+plt.xticks(rotation=45, ha="right")
+
+plt.show()
+
+def()def peak_rank():
+
+# Peak rank of Sabrina Carpenter's songs
+
+sabrina_df = df[df["artist_names"] == "Sabrina Carpenter"]
+
+[['track_name', 'peak_rank']]
+
+print("\n--- Peak Rank of Sabrina Carpenter's Songs ---")
+
+print(sabrina_df)
+
+sabrina_df.plot(x="track_name", y="peak_rank",
+
+marker="", markersize=10, color="red", linewidth=2,
+
+linestyle "dashdot")
+
+plt.xlabel("Track Name")
+
+plt.ylabel("Peak Rank")
+
+plt.title("Peak Rank of Sabrina Carpenter's Songs")
+
+plt.xticks(rotation-45, ha="right")
+
+plt.show()
+
+def songs_played():
+
+# Top 5 longest songs by duration for Sabrina Carpenter
+
+top_duration_df = df[df['artist_names'] == 'Sabrina
+
+Carpenter'][['track_name',
+
+'duration_ms']].sort_values("duration_ms",
+
+ascending False).head(5)
+
+print("\n--- Top 5 Longest Songs by Duration ---")
+
+print(top_duration_df)
+
+top_duration_df.plot.pie(y='duration_ms',
+
+labels-top_duration_df['track_name'], autopct="%1.2fx%",
+
+legend-False)
+
+plt.title("Top 5 Longest Songs by Duration for Sabrina
+
+Carpenter")
+
+plt.ylabel(") # Hide y-label for pie chart
+
+plt.show()
+
+while True:
+
+print("." 222)
+
+print("\t" 5, "MENU")
+
+print("." 222)
+
+print("1. Top 5 Songs by Danceability")
+
+print("2. Peak Rank of Sabrina Carpenter's Songs")
+
+print("3. Top 5 Songs by Weeks on Chart")
+
+print("4. Top 5 Longest Songs by Duration")
+
+choice input("Enter your choice (1-5): ")
+
+print("5. Exit")
+
+if choice '1':
+
+top5dance()
+
+elif choice == '2':
+
+peak_rank()
+
+elif choice == '3':
+
+songs_perweekchart()
+
+elif choice == '4':
+
+songs_played()
+
+elif choice '5':
+
+print("Exiting the program. Goodbye!")
+
+break
+
+else:
+
+print("Invalid choice. Please select a valid option.")
